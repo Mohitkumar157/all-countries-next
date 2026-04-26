@@ -127,7 +127,7 @@ function CountryDetails({ data, borderCountries }) {
                                 : "N/A"}
                         </div>
                     </div>
-                    <div className="border-countries  w-full shadow-sm hover:shadow-md transition col-span-3 py-2! px-4! flex flex-wrap items-center gap-4 border border-[#ccc] rounded-lg">
+                    <div className="border-countries col-span-full w-full shadow-sm hover:shadow-md transition py-2! px-4! flex flex-wrap items-center gap-4 border border-[#ccc] rounded-lg">
                         <b><p>Border countries</p></b>
                         <div className="b-countries flex flex-wrap gap-4">
                             {!borderCountries.length ? <p>No border country</p> : borderCountries?.map((country) => (
@@ -157,7 +157,7 @@ function CountryDetails({ data, borderCountries }) {
                 </div>
 
                 <div className="right w-full lg:w-[30%]">
-                    <div className="map-wraper h-full">
+                    <div className="map-wraper lg:h-full h-75">
 
 
                         <MapWraper latlng={data.latlng} name={data.name.common} />
