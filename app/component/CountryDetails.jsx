@@ -84,7 +84,7 @@ function CountryDetails({ data, borderCountries }) {
                         <div className="icon"><Languages /></div>
                         <div className="language">
                             <p className='font-semibold'>Languages</p>
-                            {Object.values(data.languages || {}).map((lang, i) => <span key={i}>{lang}</span>) || []}
+                            {Object.values(data.languages || {}).map((lang, i) => <span key={i}>{lang},</span>) || []}
                         </div>
                     </div>
                     <div className="currency  w-full shadow-sm hover:shadow-md transition py-2! px-4! flex gap-4 items-center border border-[#ccc] rounded-lg ">
