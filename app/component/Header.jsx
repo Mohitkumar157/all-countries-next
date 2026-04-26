@@ -11,9 +11,14 @@ function Header() {
         <header className={`headerContainer filter ${theme === "light" ? "bg-white text-black drop-shadow-[2px_2px_3px_#ccc]!" : "bg-[#2b3945] text-white drop-shadow-[2px_2px_3px_#202c37]!"} transition-all duration-300 ease-in-out`}>
             <div className="container">
                 <div className="header flex items-center justify-between py-6!">
-                    <h1 className="title text-[32px] font-bold"><Link className="logo" href="/">Where in the world?</Link></h1>
+                    <div className="head-wraper">
+                        <h1 className="title text-[32px] font-bold">
+                            <Link className="logo" href="/">Explore the <span className='text-blue-500'>World</span></Link>
+                        </h1>
+                        <span className={`${theme === "light" ? "text-[#706a6a]" : "text-white"} text-[14px]`}>Discover information about all countries in the world</span>
+                    </div>
                     <div className="wraper flex flex-row-reverse gap-2.5 items-center">
-                       {theme === "light" ? <Sun /> : <Moon />}
+                        {theme === "light" ? <Sun /> : <Moon />}
                         <div
                             onClick={themeToggler}
                             className={`toggle-btn cursor-pointer w-13 ${theme === "light" ? "bg-[#ccc] drop-shadow-[1px_1px_5px_#e7e7e7]" : "bg-[#376fcb]"
